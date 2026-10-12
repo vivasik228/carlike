@@ -1,0 +1,24 @@
+/* State feedback stays inline; spacing supplies the grouping. */
+.form-intro{margin:0;font-size:12px}
+.form-loading{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:12px}
+.form-status.error p{color:var(--error)}
+.form-status .text-link{margin-top:8px;text-decoration:underline}
+.conflict-reset{display:flex;min-height:44px;padding:0;border:0;background:none;text-align:left}
+.consent-status{margin-top:16px;display:flex;gap:8px 24px;flex-wrap:wrap}
+.consent-status p{flex-basis:100%}
+.consent-status button{padding:0;background:none;border:0;min-height:44px}
+.form-bottom .button:disabled{transform:none}
+.gallery-count{font-size:12px;margin-bottom:24px}
+.gallery-empty{padding-block:24px 48px;max-width:600px}
+.gallery-empty h3{font-family:var(--font-display);font-size:32px;font-weight:500;line-height:1.2}
+.gallery-empty p{margin-top:8px;font-size:14px}
+.gallery-empty .text-link{margin-top:24px;min-height:44px;background:none;border:0;padding:0;color:var(--accent)}
+.photo-state{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:24px;text-align:center;background:var(--surface);color:var(--muted);font-size:12px}
+.photo-loading{pointer-events:none;animation:photo-loading-reveal 0s .3s both}
+.photo-error p{color:var(--text);font-size:14px}
+.photo-error .text-link{color:var(--accent);background:none;border:0;min-height:44px;padding:0}
+.work-photo .expand-button,.work-photo .demo-tag{z-index:2}
+.project-photo .photo-state{pointer-events:none}
+button:active:not(:disabled),a.button:active{transform:translateY(1px)}
+@keyframes photo-loading-reveal{from{visibility:hidden}to{visibility:visible}}
+@media(max-width:700px){.form-status{font-size:14px}.form-consent,.field-hint{font-size:12px}.gallery-empty h3{font-size:28px}}

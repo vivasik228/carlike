@@ -1,0 +1,12 @@
+import { cpSync, existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { spawn } from 'node:child_process';
+process.env.NODE_ENV='production';
+for(const file of ['.env.production.local','.env.local','.env.production','.env'])if(existsSync(file))process.loadEnvFile(file);
+const server=resolve('.next/standalone/server.js');
+if(!existsSync(server))throw Error('Сначала выполните pnpm build');
+cpSync('public','.next/standalone/public',{recursive:true});
+cpSync('.next/static','.next/standalone/.next/static',{recursive:true});
+const child=spawn(process.execPath,[server],{stdio:'inherit',env:{...process.env,HOSTNAME:process.env.HOSTNAME||'127.0.0.1',PORT:process.env.PORT||'3000'}});
+child.on('exit',code=>{process.exitCode=code||0;});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));

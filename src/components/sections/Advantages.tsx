@@ -1,0 +1,2 @@
+import { advantages } from '@/data/content';
+export function Advantages(){return <section className="section container advantages"><div className="advantages-intro"><h2>ОДИН АДРЕС.<br/>РАЗНЫЕ ЗАДАЧИ.</h2><p>Перед визитом сообщите<br/>марку, модель и нужные работы.<br/>Согласуем детали обращения.</p></div><div className="advantage-list">{advantages.map(([title,text],index)=><div className="advantage-row" key={title}><span className="row-number">0{index+1}</span><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></section>;}

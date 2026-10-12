@@ -1,0 +1,29 @@
+2:"$Sreact.fragment"
+3:I[3454,[],""]
+4:I[4212,[],""]
+9:"static/chunks/427-8af8f9894e18930a.js"
+a:"static/chunks/app/cookies/page-6518866f0a113172.js"
+b:I[3427,["427","$9","674","$a"],""]
+c:"CookieSettingsButton"
+d:I[7299,["427","$9","674","$a"],"$c"]
+e:I[135,[],"OutletBoundary"]
+f:"$Sreact.suspense"
+12:"ViewportBoundary"
+13:I[135,[],"$12"]
+14:"MetadataBoundary"
+15:I[135,[],"$14"]
+16:I[4598,[],"IconMark"]
+6:X
+6:C
+7:X
+8:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","div",null,{"className":"container page-intro","children":[[["$","nav",null,{"className":"breadcrumbs","aria-label":"Хлебные крошки","children":[["$","span","Главная",{"children":[false," ",["$","$Lb",null,{"href":"/","children":"Главная"}]]}],["$","span","Cookie и аналитика",{"children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":12,"height":12,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-chevron-right","children":[["$","path","mthhwq",{"d":"m9 18 6-6-6-6"}],"$undefined"]}]," ",["$","span",null,{"aria-current":"page","children":"Cookie и аналитика"}]]}]]}],""],["$","h1",null,{"children":"COOKIE И АНАЛИТИКА"}]]}],["$","article",null,{"className":"container legal-page","children":[["$","h2",null,{"children":"Необходимые настройки"}],["$","p",null,{"children":"В localStorage браузера сохраняется только выбор необязательной аналитики (ключ carlike-analytics-v1). Эти настройки нужны, чтобы сайт учитывал ваш выбор. Они не содержат имя, телефон или сведения из заявки."}],["$","h2",null,{"children":"Необязательная аналитика"}],["$","p",null,{"children":"Яндекс Метрика подключается только после выбора «Разрешить аналитику», если оператор настроил счётчик. Передаются события звонка, маршрута, открытия записи, успешной отправки и выбора услуги. Содержимое заявки в события не включается. Вебвизор выключен."}],["$","p",null,{"children":"Сервис аналитики может обрабатывать технические сведения о браузере, устройстве и посещении и устанавливать собственные cookie. Фактический перечень, сроки и реквизиты обработчика оператор обязан проверить и отразить перед подключением счётчика."}],["$","h2",null,{"children":"Как изменить выбор"}],["$","p",null,{"children":"Откройте настройки ниже. Выбор «Без аналитики» прекращает работу счётчика; доступные cookie с префиксом _ym удаляются для текущего сайта. Настройки сторонних доменов также можно очистить средствами браузера."}],["$","$Ld",null,{}],["$","h2",null,{"children":"Карта и внешние ссылки"}],["$","p",null,{"children":"Ссылки на Яндекс Карты открывают внешний сайт. Встроенная карта, если она настроена, загружается только после нажатия отдельной кнопки. Действуют условия соответствующего сервиса."}],["$","p",null,{"children":[["$","$Lb",null,{"href":"/privacy","children":"Политика обработки персональных данных"}],"."]}]]}]],null,["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],"p":"$@11","v":null,"s":"$7"}}]]
+1:[["children",{"s":"cookies","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L13",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#08090B"}]]}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Cookie и настройки аналитики | CarLike"}],["$","meta","1",{"name":"description","content":"Как сайт CarLike использует локальные настройки браузера и необязательную Яндекс Метрику. Управление выбором аналитики."}],["$","meta","2",{"name":"robots","content":"noindex, nofollow"}],["$","meta","3",{"property":"og:title","content":"Cookie и настройки аналитики"}],["$","meta","4",{"property":"og:description","content":"Как сайт CarLike использует локальные настройки браузера и необязательную Яндекс Метрику. Управление выбором аналитики."}],["$","meta","5",{"property":"og:site_name","content":"CarLike"}],["$","meta","6",{"property":"og:locale","content":"ru_RU"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary"}],["$","meta","9",{"name":"twitter:title","content":"Cookie и настройки аналитики"}],["$","meta","10",{"name":"twitter:description","content":"Как сайт CarLike использует локальные настройки браузера и необязательную Яндекс Метрику. Управление выбором аналитики."}],["$","link","11",{"rel":"icon","href":"/carlike/favicon.svg"}],["$","$L16","12",{}]]}]}],null]}],null]}],"p":"$@17","v":null,"s":"$7"}},"a":"$@18","u":"$@19","b":"nWdBTNmCXacZPXRpyoJgd"}
+10:null
+19:true
+7:300
+7:C
+18:0
+5:"$undefined"
+17:"$undefined"
+11:"$undefined"

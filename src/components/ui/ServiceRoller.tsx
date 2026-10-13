@@ -21,6 +21,6 @@ function Roller({services,onActiveChange}:{services:RollerService[];onActiveChan
     {[0,1,2].flatMap(copy=>services.map((service,i)=><div className="roller-item" key={`${copy}-${service.id}`} data-physical-index={copy*services.length+i} style={{opacity:copy===1&&i===0?1:.3}}><span className="roller-item-title" style={{transform:`scale(${copy===1&&i===0?1:.84})`}}>{service.title}</span></div>))}
    </div>
   </div>
-  <div className="roller-metadata"><div className="roller-live" aria-live="polite" aria-atomic="true"><span className="sr-only">Услуга {index+1} из {services.length}: {active.title}. </span><p className="roller-description">{active.description}</p></div><Link ref={detail} href={active.href} className="roller-detail" data-goal="click_service">Состав работ<ArrowUpRight size={17}/></Link></div>
+  <div className="roller-metadata"><div className="roller-live" aria-live="polite" aria-atomic="true"><span className="sr-only">Услуга {index+1} из {services.length}: {active.title}. </span><p className="roller-description">{active.description}</p></div><Link ref={detail} href={active.href} className="roller-detail" data-goal="click_service">Об услуге<ArrowUpRight size={17}/></Link></div>
  </div>;
 }

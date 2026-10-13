@@ -16,7 +16,7 @@ export async function handleBooking(request:Request){
   // В preview сверяем с HTTP Host; в production всегда с настроенным доменом.
   const expected=business.siteUrl?new URL(business.siteUrl).origin:`${requestUrl.protocol}//${request.headers.get('host')||requestUrl.host}`;
   if(!origin||origin!==expected)return reply(403,'Отправьте заявку с сайта CarLike.');
-  if(!request.headers.get('content-type')?.startsWith('application/json'))return reply(415,'Неверный формат заявки. Обновите страницу.');
+  if(!request.headers.get('content-type')?.startsWith('application/json'))return reply(415,'Не удалось прочитать заявку. Обновите страницу и попробуйте ещё раз.');
   const source=process.env.TRUST_PROXY==='true'?(request.headers.get('x-real-ip')||'global').slice(0,64):'global';
   if(!temporaryRate(source))return reply(429,'Слишком много попыток. Попробуйте позже или позвоните.');
   let body:unknown;try{body=JSON.parse(await limitedBody(request));}catch{return reply(400,'Не удалось прочитать заявку. Проверьте данные и повторите отправку.');}
@@ -24,6 +24,6 @@ export async function handleBooking(request:Request){
   if(parsed.data.website)return reply(400,'Не удалось отправить заявку. Пожалуйста, позвоните.');
   const consent=consentRecord();
   if(parsed.data.consentHash!==consent.hash)return reply(409,'Согласие обновилось. Прочитайте новую редакцию и отметьте согласие ещё раз.',{code:'CONSENT_CHANGED'});
-  try{const store=getStore();if(!store.allow(source))return reply(429,'Слишком много заявок. Попробуйте через 10 минут или позвоните.');const result=store.save(parsed.data,consent.text,consent.version);return reply(200,'Спасибо! Заявка отправлена. Мы свяжемся с вами для уточнения деталей.',{id:result.id});}
-  catch(error){if(error instanceof Error&&error.message==='IDEMPOTENCY_CONFLICT')return reply(409,'Предыдущая заявка могла уже сохраниться. Сейчас поля отличаются. Позвоните, чтобы уточнить её, или подготовьте новую заявку.',{code:'IDEMPOTENCY_CONFLICT'});return reply(503,'Онлайн-заявки сейчас недоступны. Пожалуйста, свяжитесь с CarLike по телефону.');}
+  try{const store=getStore();if(!store.allow(source))return reply(429,'Слишком много заявок. Попробуйте через 10 минут или позвоните.');const result=store.save(parsed.data,consent.text,consent.version);return reply(200,'Спасибо! Заявка у нас. Позвоним и обсудим работы.',{id:result.id});}
+  catch(error){if(error instanceof Error&&error.message==='IDEMPOTENCY_CONFLICT')return reply(409,'Первая заявка могла уже дойти, а теперь данные изменились. Позвоните, чтобы проверить её, или создайте новую заявку.',{code:'IDEMPOTENCY_CONFLICT'});return reply(503,'Заявку на сайте сейчас не отправить. Позвоните в CarLike.');}
 }
